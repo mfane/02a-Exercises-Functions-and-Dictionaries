@@ -16,9 +16,9 @@ s = 0
 for e in example_list:
 	s += e
 print(s)
-#
+#38
 # What do these five lines of code do?
-#
+#they make a list and go through the list adding each element together and prints the result
 
 # --------------------------------------------------
 
@@ -33,15 +33,15 @@ example_set = example_set - example_set_2
 print(example_set)
 set_to_list = list(example_set)
 print(set_to_list)
-#
-#
-#
-#
-#
+#{1,2,3,4}
+#3 is in set
+#4 is in set
+#{1, 2, 3}
+#[1,2, 3]
 # What qualities of a python set do you see in the (above) example?
-#
+#a set throws away duplicates of data already in it
 # In what situations might a python set be a useful data structure?
-#
+#when you need to keep track of data but dont care about duplicates
 
 # --------------------------------------------------
 
@@ -77,11 +77,11 @@ r = product_list([1,2,3])
 print(r)
 print(product_list([2,5,6]))
 print(product_list([-2,3,-4,5,-6]))
-#
-#
-#
+#6
+#60
+#-720
 # What is happening in the (above) example?
-#
+#a function takes a list and goes through it and multiplies all the elements together
 
 # --------------------------------------------------
 
@@ -108,18 +108,18 @@ for y in years:
 		print(str(y) + ': I get an extra day this year!')
 	else:
 		print(str(y) + ': Just 365 for me')
-#
-#
-#
-#
-#
-#
+#2017: Just 365 for me
+#2018: Just 365 for me
+#2000: Just 365 for me
+#2100: Just 365 for me
+#2400: Just 365 for me
+#This isn't even a year: Just 365 for me
 # What is happening in the (above) example?
-#
+#a function was created to find out if a number that was passed to it would count as a leap year, it does this by seeing if the number is divisable by 400, 100, or 4
 # What is the purpose for the multi-line comment at the beginning of the is_leap_year function?
-#
+#it explains the purpose of the function
 # What happens if you pass a value to the function that isn't a year? Why?
-#
+#it returns false, because if it not given a number then the argument cant be a leap year
 
 # --------------------------------------------------
 
@@ -133,7 +133,7 @@ def is_fizz(test):
 def is_buzz(test):
 	if not isinstance(test,int):
 		return False
-	if test % 2 == 0:
+	if (test % 2 == 0) and (test > 0):
 		return True
 	return False
 for i in range(0,10):
@@ -145,24 +145,24 @@ for i in range(0,10):
 		print('%d: buzz'%i)
 	else:
 		print(i)
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#0: fizzbuzz
+#1
+#2: buzz
+#3: fizz
+#4: buzz
+#5
+#6: fizzbuzz
+#7
+#8: buzz
+#9: fizz
 # What is happening in this example?
-#
+#checks to see if a number is divisable by 2 or 3
 # How would you alter the program so that it prints fizz on multiples of 5 and buzz on multiples of 4?
-#
+#change the number in the test % if statement to a 5 in is_fizz and to a 4 in is_buss
 # We actually don't want the program to print fizzbuzz when i <= 0. How would you fix this problem?
-#
+#change the second if line to if (test % 2 == 0) and (test > 0):
 # How would you alter the program so that it prints your name whenever both conditions are met?
-#
+#change the print under the if is_fizz and is_buzz to print('%d: fizzbuzz'%i + " your name")
 
 # --------------------------------------------------
 
@@ -219,10 +219,10 @@ script = [
 starting = 0
 get_option(script[starting]['options'])
 # What is happening in this block of code?
-#
+#it takes a script and reads it out to you and takes an input
 # What does the get_option function do?
-#
+#it reads a specfic part of the script and gets which option you want to take
 # How would you display the description of the current location?
-#
+#put print(script[starting] ['description']) before get option
 # How would you display the description of the next location (after selecting an option)?
-#
+#do print(script[get_option(script[starting]['options'])] ['description'])
